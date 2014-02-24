@@ -12,3 +12,15 @@ fi
 
 # Customize to your needs...
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# startup virtualenv-burrito
+if [ -f $HOME/.venvburrito/startup.sh ]; then
+    . $HOME/.venvburrito/startup.sh
+fi
+export PYTHONPATH=$PYTHONPATH:/Users/nikotzan/Projects/personal/libsvm-3.17/python
+export CLASSPATH=$CLASSPATH:/Users/nikotzan/Projects/personal/weka-3-7-10/weka.jar:/Users/nikotzan/Projects/personal/libsvm-3.17/java/libsvm.jar
+export WEKA_JAR_PATH=/Users/nikotzan/Projects/personal/weka-3-7-10/weka.jar
+
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
